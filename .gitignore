@@ -7,9 +7,3 @@ all_c_programs.out
 # Ignore OS-specific junk
 .DS_Store
 Thumbs.db
-
-# Ignore VS Code specific settings (optional, some prefer to keep these)
-.vscode/
-
-# ignore clang-format configuration file
-.clang-format

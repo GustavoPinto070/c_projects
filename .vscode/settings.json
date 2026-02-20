@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/*/launch.json": false,
+        "**/*/tasks.json": false,
+        "**/*.out": true,
+        "**/*.o": true,
+        "**/.clang-format": false,
+    },
+    "files.associations": {
+        "*.h": "c",
+        "*.tcc": "cpp"
+    },
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.default.configurationProvider": "llvm-vs-code-extensions.vscode-clangd",
+    "clangd.path": "/usr/bin/clangd-18",
+    "clangd.arguments": [
+        "--clang-tidy",
+        "--header-insertion=never"
+    ],
+    "clang-tidy.executable": "/usr/bin/clang-tidy"
+}

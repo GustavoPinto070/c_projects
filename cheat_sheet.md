@@ -62,5 +62,3 @@ gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm /home/utilizador/slide
 - For runtime checks use `valgrind ./output_name` (helps find memory leaks/invalid accesses).
 - Recursion: computing factorial recursively is fine for small `n`, but large `n` can overflow the stack or the integer type. Consider iterative solutions or big-integer libraries for large factorials.
 - If you see a warning, read it and fix the code — warnings often point to real bugs.
-
-Feel free to ask for a version tailored to your operating system, build system, or to add examples for `scanf`, `malloc`/`free`, and simple Makefile rules.
