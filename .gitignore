@@ -10,3 +10,6 @@ Thumbs.db
 
 # Ignore VS Code specific settings (optional, some prefer to keep these)
 .vscode/
+
+# ignore clang-format configuration file
+.clang-format
