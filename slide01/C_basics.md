@@ -1,8 +1,9 @@
-**C Basics**
+# C Basics
 
 A short starter cheat-sheet for beginners coming from Python. Covers common `#include`s, printf/scanf format specifiers, comments, and a recommended compile command with flag explanations.
 
 **Includes:**
+
 - `stdio.h`: input/output functions (`printf`, `scanf`, `fopen`, `FILE`, `fclose`).
 - `stdlib.h`: utilities (`malloc`, `free`, `exit`, `strtol`, `atoi`, `qsort`).
 - `string.h`: string helpers (`strlen`, `strcpy`, `strcat`, `strcmp`, `memcpy`, `memset`).
@@ -11,6 +12,7 @@ A short starter cheat-sheet for beginners coming from Python. Covers common `#in
 - `stdint.h`: fixed-width integer types (`int32_t`, `uint64_t`) for portability.
 
 **Common printf/scanf format specifiers (basic):**
+
 - `%d` : signed `int` (printf/scanf for `int`: `printf("%d", i)`, `scanf("%d", &i)`).
 - `%ld` : signed `long`.
 - `%u` : unsigned `int`.
@@ -25,6 +27,7 @@ A short starter cheat-sheet for beginners coming from Python. Covers common `#in
 Tip: To print a literal percent sign, use `%%` in the format string.
 
 **Comments:**
+
 - Single-line: `// this is a comment`
 - Multi-line: `/* this is a
    multi-line comment */`
@@ -53,6 +56,7 @@ gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm /home/utilizador/slide
 ```
 
 **Extra tips for beginners:**
+
 - Use `strtol` (from `stdlib.h`) instead of `atoi` for safer number parsing — it reports conversion errors.
 - For debugging add `-g` to the compile flags and run with `gdb ./output_name` or use an IDE debugger.
 - For runtime checks use `valgrind ./output_name` (helps find memory leaks/invalid accesses).
