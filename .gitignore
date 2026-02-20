@@ -1,3 +1,4 @@
+# Ignore compiled C programs
 *.out
 all_c_programs.out
 
@@ -7,3 +8,9 @@ all_c_programs.out
 # Ignore OS-specific junk
 .DS_Store
 Thumbs.db
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore Clang-Format configuration file
+.clang-format

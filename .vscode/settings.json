@@ -2,10 +2,13 @@
     "editor.formatOnSave": true,
     "files.exclude": {
         "**/*/launch.json": false,
+        "**/*/settings.json": false,
         "**/*/tasks.json": false,
-        "**/*.out": false,
-        "**/*.o": false,
-        "**/.clang-format": false,
+        "**/.vscode": true,
+        "**/*.out": true,
+        "**/*.o": true,
+        "**/.clang-format": true,
+        "**/.gitignore": true
     },
     "files.associations": {
         "*.h": "c",
