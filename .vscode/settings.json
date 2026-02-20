@@ -3,8 +3,8 @@
     "files.exclude": {
         "**/*/launch.json": false,
         "**/*/tasks.json": false,
-        "**/*.out": true,
-        "**/*.o": true,
+        "**/*.out": false,
+        "**/*.o": false,
         "**/.clang-format": false,
     },
     "files.associations": {
