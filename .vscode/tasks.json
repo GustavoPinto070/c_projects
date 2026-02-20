@@ -47,12 +47,13 @@
       "command": "bash",
       "args": [
         "-c",
-        "if command -v clang-tidy >/dev/null 2>&1; then clang-tidy ${file} -- -std=c11; else echo 'clang-tidy not found. Install it (Debian/Ubuntu): sudo apt install clang-tidy ; Fedora: sudo dnf install clang-tools-extra ; Arch: sudo pacman -S clang; or install from LLVM packages.'; fi"
+        "if command -v clang-tidy-18 >/dev/null 2>&1; then clang-tidy-18 ${file} -- -std=c11; elif command -v clang-tidy >/dev/null 2>&1; then clang-tidy ${file} -- -std=c11; else echo \"clang-tidy not found. Install it: sudo apt install clang-tidy-18\"; bind; fi"
       ],
       "problemMatcher": [],
       "presentation": {
         "echo": true,
         "reveal": "always",
+        "focus": true,
         "panel": "shared"
       }
     },

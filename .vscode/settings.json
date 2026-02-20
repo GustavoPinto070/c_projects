@@ -1,8 +1,12 @@
 {
     "editor.formatOnSave": true,
     "files.exclude": {
-        "**/.vscode": true,
-        "**/*.out": true
+        "**/*/extensions.json": true,
+        "**/*/launch.json": true,
+        "**/*/tasks.json": true,
+        "**/*.out": true,
+        "**/*.o": true,
+        "**/.clang-format": true,
     },
     "files.associations": {
         "*.h": "c",
@@ -12,7 +16,7 @@
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
     "C_Cpp.default.configurationProvider": "llvm-vs-code-extensions.vscode-clangd",
-    "clangd.path": "/usr/bin/clangd",
+    "clangd.path": "/usr/bin/clangd-18",
     "clangd.arguments": [
         "--clang-tidy",
         "--header-insertion=never"
