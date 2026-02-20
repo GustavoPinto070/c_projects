@@ -10,11 +10,11 @@ This folder contains example C sources and a small VS Code workspace setup to bu
 
 **Files to check:**
 
-- [slide01/.vscode/tasks.json](slide01/.vscode/tasks.json)
-- [slide01/.vscode/launch.json](slide01/.vscode/launch.json)
-- [slide01/.vscode/settings.json](slide01/.vscode/settings.json)
-- [slide01/.vscode/extensions.json](slide01/.vscode/extensions.json)
-- [slide01/.clang-format](slide01/.clang-format)
+- [.vscode/tasks.json](.vscode/tasks.json)
+- [.vscode/launch.json](.vscode/launch.json)
+- [.vscode/settings.json](.vscode/settings.json)
+- [.vscode/extensions.json](.vscode/extensions.json)
+- [.clang-format](.clang-format)
 
 Usage (examples)
 
@@ -46,8 +46,8 @@ Recommended VS Code extensions (workspace recommendations):
 
 Notes
 
-- The workspace hides generated `.out` files by default.
+- Generated `.out` files are visible in the Explorer.
 - Formatting on save is enabled and controlled by the included `.clang-format` file. Edit it to change style.
-- To change compiler flags or task names, edit [slide01/.vscode/tasks.json](slide01/.vscode/tasks.json).
+- To change compiler flags or task names, edit [.vscode/tasks.json](.vscode/tasks.json).
 
 Want anything else here (keyboard shortcut, CI snippet, or Makefile)?

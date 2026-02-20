@@ -51,8 +51,8 @@ gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm /path/to/file.c -o out
 Example adapted for the factorial example in this repo:
 
 ```bash
-gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm /home/utilizador/slides_iaed/slide1/factorial/factorial.c -o factorial.out
-./factorial.out 5
+gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm /home/utilizador/slides_iaed/slide01/factorial/factorial.c -o factorial.out
+./factorial.out
 ```
 
 **Extra tips for beginners:**

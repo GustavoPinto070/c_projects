@@ -1,23 +1,22 @@
+
+#include <stdio.h>
+
 /*
  * factorial.c
- * Simple C program demonstrating a recursive factorial function
- * and a small command-line `main` that reads one argument.
+ * Simple C program demonstrating a recursive factorial function.
  *
- * Usage:
- *   Compile:
- *     gcc -Wall -Wextra -Werror -Wno-unused-result -lm factorial.c -o factorial.out
- *   Run:
- *     ./factorial.out 5
+ * This file is for beginners learning about recursion and functions.
+ * To compile and run:
+ *   gcc -Wall -Wextra -Werror -Wno-unused-result -std=c11 -lm -o factorial.out factorial.c
+ *   ./factorial.out
  *
- * This is intended for beginners coming from higher-level languages
- * (for example Python). The program expects a single non-negative
- * integer on the command line and prints n! (factorial of n).
+ * The program computes and prints 5! (5 factorial) using recursion.
  */
 
-#include <stdio.h>   /* printf, fprintf */
-#include <stdlib.h>  /* strtol, exit */
-
-/* Compute factorial(n) recursively. For n == 0 returns 1. */
+/* factorial - compute n! recursively
+ * @n: non-negative integer
+ * Returns 1 for n == 0, otherwise returns n * factorial(n-1)
+ */
 int factorial(int n)
 {
     if (n == 0)
@@ -26,35 +25,14 @@ int factorial(int n)
         return n * factorial(n - 1);
 }
 
-/*
- * main - program entry point
- * argc: number of command-line arguments (including program name)
- * argv: array of strings; argv[1] should be the integer input
- */
-int main(int argc, char *argv[])
+int main()
 {
-    if (argc != 2) {
-        /* Tell the user how to use the program */
-        fprintf(stderr, "Usage: %s <non-negative-integer>\n", argv[0]);
-        return 1;
-    }
-
-    /* Convert string to long with error checking. Beginners: strtol
-       is safer than atoi because it reports conversion errors. */
-    char *endptr = NULL;
-    long val = strtol(argv[1], &endptr, 10);
-
-    /* If there's leftover text or the number is negative, show an error */
-    if (*endptr != '\0' || val < 0) {
-        fprintf(stderr, "Invalid non-negative integer: %s\n", argv[1]);
-        return 1;
-    }
-
-    /* We cast to int because factorial is defined for int above. */
-    int n = (int)val;
+    /* Hard-coded to compute factorial of 5. */
+    int n = 5;
+    /* Call the recursive factorial function. */
     int result = factorial(n);
-
-    /* Print just the numeric result followed by a newline. */
-    printf("%d\n", result);
+    /* Print the result with a newline character. */
+    printf("Factorial of %d is: %d\n", n, result);
+    /* Return 0 to indicate the program completed successfully. */
     return 0;
 }

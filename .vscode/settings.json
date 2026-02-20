@@ -1,6 +1,7 @@
 {
     "editor.formatOnSave": true,
     "files.exclude": {
+        "**/.vscode": true,
         "**/*.out": true
     },
     "files.associations": {

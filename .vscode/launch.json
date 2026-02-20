@@ -3,11 +3,16 @@
   "configurations": [
     {
       "name": "Run current file (no debug)",
-      "type": "node",
+      "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
       "args": [],
+      "stopAtEntry": false,
       "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "preLaunchTask": "Build current file"
     }
   ]
