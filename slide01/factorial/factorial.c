@@ -58,36 +58,3 @@ int main(int argc, char *argv[])
     printf("%d\n", result);
     return 0;
 }
-// original
-#include <stdio.h>
-#include <stdlib.h>
-
-int factorial(int n)
-{
-    if (n==0)
-        return 1;
-    else
-        return n*factorial(n-1);
-}
-
-// copilot did this (don't understand it yet)
-int main(int argc, char *argv[])
-{
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s <non-negative-integer>\n", argv[0]);
-        return 1;
-    }
-
-    char *endptr = NULL;
-    long val = strtol(argv[1], &endptr, 10);
-    if (*endptr != '\0' || val < 0) {
-        fprintf(stderr, "Invalid non-negative integer: %s\n", argv[1]);
-        return 1;
-    }
-
-    int n = (int)val;
-    int result = factorial(n);
-    printf("%d\n", result);
-    return 0;
-}
-

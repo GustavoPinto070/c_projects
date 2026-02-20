@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run current file (no debug)",
+      "type": "node",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "cwd": "${fileDirname}",
+      "preLaunchTask": "Build current file"
+    }
+  ]
+}
