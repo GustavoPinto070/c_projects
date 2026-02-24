@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+#define DIM 100
+
+int main() {
+    char palavra[DIM];
+    scanf("%s", palavra);
+    printf("%s\n", palavra);
+    return 0;
+}
