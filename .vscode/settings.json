@@ -1,27 +1,14 @@
 {
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
     "editor.formatOnSave": true,
+    "files.associations": {
+        "*.h": "c"
+    },
     "files.exclude": {
-        "**/*/launch.json": false,
-        "**/*/settings.json": false,
-        "**/*/tasks.json": false,
-        "**/.vscode": true,
         "**/*.out": true,
         "**/*.o": true,
-        "**/.clang-format": true,
-        "**/.gitignore": true
+        "**/.git": true
     },
-    "files.associations": {
-        "*.h": "c",
-        "*.tcc": "cpp"
-    },
-    "C_Cpp.clang_format_style": "file",
-    "C_Cpp.clang_format_fallbackStyle": "LLVM",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "C_Cpp.default.configurationProvider": "llvm-vs-code-extensions.vscode-clangd",
-    "clangd.path": "/usr/bin/clangd-18",
-    "clangd.arguments": [
-        "--clang-tidy",
-        "--header-insertion=never"
-    ],
-    "clang-tidy.executable": "/usr/bin/clang-tidy"
+    "C_Cpp.clang_format_fallbackStyle": "LLVM"
 }

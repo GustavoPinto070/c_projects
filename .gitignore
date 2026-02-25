@@ -9,11 +9,5 @@ all_c_programs.out
 .DS_Store
 Thumbs.db
 
-# Ignore Visual Studio Code settings
-.vscode/
-
-# Ignore Clang-Format configuration file
-.clang-format
-
 # Ignore Windows Zone Identifier files
 *Zone.Identifier

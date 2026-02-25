@@ -1,57 +1,52 @@
-# C Project Development Environment
+# C Project Development Environment (WSL + GCC)
 
-This workspace is configured to make C development in VS Code smooth and efficient.
+This workspace is optimized for C development using the GNU toolchain within **WSL**.
 
 ---
 
 ## Workspace Settings
 
-To manage visibility of compiled `.out` files, edit `.vscode/settings.json`.
+Compiled `.out` binaries and object files are hidden by default to keep the explorer clean. You can toggle this in `.vscode/settings.json`.
 
-### Hide `.out` files
+### Toggle Binary Visibility
 
-```json
-"files.exclude": {
-    "**/*.out": true
-}
-```
-
-### Show `.out` files
+Change the value to `false` if you need to see your executables in the sidebar:
 
 ```json
 "files.exclude": {
-    "**/*.out": false
+    "**/*.out": true,
+    "**/*.o": true
 }
+
 ```
 
 ---
 
 ## Running and Debugging
 
-You can run or debug your C programs directly from VS Code:
+The workspace is configured to use **GDB** for debugging and **GCC** for compilation.
 
-- **F5** — Start debugging (breakpoints, variable inspection, etc.)
-- **Ctrl + F5** — Run without debugging (compile + execute in terminal)
+* **F5** — **Build & Debug**: Automatically compiles the active file and starts a debugging session (breakpoints, variable inspection).
+* **Ctrl + F5** — **Run (No Debug)**: Compiles and executes the program directly in the integrated terminal.
 
 ---
 
-## Useful Keybinds and Tasks
+## Keybinds and Tasks
 
-Custom tasks are available for building and linting.
+Custom tasks are defined in `.vscode/tasks.json` to handle compilation with strict flags (`-Wall -Wextra -Werror`).
 
-- **Ctrl + Shift + B** — Build current file  
-- **Ctrl + Shift + P** — Open Command Palette  
-- **Ctrl + `** — Open terminal  
-- **Ctrl + Shift + P → "Run Task"** — Search for tasks  
+* **Ctrl + Shift + B** — Build current file
+* **Ctrl + Shift + P** — Open Command Palette
+* **Ctrl + `** — Toggle Terminal
 
-### Shortcut Table
+### Quick Reference Table
 
-| Action               | Keybind                       |
-|----------------------|-------------------------------|
-| Build Current File   | Ctrl + Shift + B              |
-| Open Command Palette | Ctrl + Shift + P              |
-| Open Terminal        | Ctrl + `                      |
-| Search for Tasks     | Ctrl + Shift + P → "Run Task" |
+| Action | Keybind | Task Name / Command |
+| --- | --- | --- |
+| **Build File** | `Ctrl + Shift + B` | Build current file |
+| **Debug File** | `F5` | Debug C Program |
+| **Run File** | `Ctrl + F5` | Run current file (no debug) |
+| **Terminal** | `Ctrl + `` | Open WSL Bash |
 
 ---
 
@@ -59,24 +54,21 @@ Custom tasks are available for building and linting.
 
 ### Build current file
 
-Compiles the currently open file into a `.out` executable.
+Compiles the active `.c` file using:
+`gcc -std=c11 -Wall -Wextra -Werror -lm`
 
 ### Build all C files in folder
 
-Useful for multi-file projects.
-
-### Run clang-tidy on current file
-
-Runs the linter to detect code quality issues and potential bugs.
+Useful for projects split across multiple files. It links all `.c` files in the current directory into `all_c_programs.out`.
 
 ---
 
 ## Requirements
 
-Install clang-tidy 18 for best results:
+Ensure the build essentials are installed in your WSL Ubuntu instance:
 
 ```bash
-sudo apt install clang-tidy-18
-```
+sudo apt update
+sudo apt install build-essential gdb
 
-The tasks will fall back to the default `clang-tidy` if version 18 is not available.
+```
