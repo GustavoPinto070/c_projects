@@ -20,9 +20,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Run with input.txt",
@@ -31,45 +29,32 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "dependsOn": [
-                "Build current file"
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": false
-            },
+            "dependsOn": ["Build current file"],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
                 "focus": true,
                 "panel": "shared",
-                "showReuseMessage": false,
                 "clear": true
             },
             "problemMatcher": []
         },
         {
-            "label": "Build current file",
-            "type": "cppbuild",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-g",
-                "-Wall",
-                "-Wextra",
-                "-Werror",
-                "-std=c11",
-                "-lm",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "label": "Run Test: Compare to Expected",
+            "type": "shell",
+            "command": "./${fileBasenameNoExtension}.out < input.txt > output.tmp && diff -u --color=always expected.txt output.tmp && echo '\n✅ TEST PASSED' || echo '\n❌ TEST FAILED'",
+            "options": {
+                "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "dependsOn": ["Build current file"],
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
         }
     ]
 }
