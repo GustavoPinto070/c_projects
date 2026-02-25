@@ -20,7 +20,9 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"]
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "label": "Run with input.txt",
@@ -29,7 +31,9 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "dependsOn": ["Build current file"],
+            "dependsOn": [
+                "Build current file"
+            ],
             "group": {
                 "kind": "test",
                 "isDefault": false
@@ -43,6 +47,29 @@
                 "clear": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Build current file",
+            "type": "cppbuild",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-std=c11",
+                "-lm",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
