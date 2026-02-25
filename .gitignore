@@ -11,3 +11,6 @@ Thumbs.db
 
 # Ignore Windows Zone Identifier files
 *Zone.Identifier
+
+# Ignore .tmp files
+*.tmp
