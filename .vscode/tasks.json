@@ -20,9 +20,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Run with input.txt",
@@ -31,9 +29,19 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "dependsOn": [
-                "Build current file"
-            ],
+            "dependsOn": ["Build current file"],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
             "problemMatcher": []
         }
     ]
