@@ -72,6 +72,23 @@
                 "clear": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Run all inputs",
+            "type": "shell",
+            "command": "for f in inputs/*.txt; do echo \"--- Running $f ---\"; ./${fileBasenameNoExtension}.out < \"$f\"; echo -e \"\\n\"; done",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": ["Build current file"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
         }
     ]
 }
