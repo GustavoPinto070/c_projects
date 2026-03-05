@@ -13,11 +13,18 @@ Complexo soma(Complexo c1, Complexo c2) {
   return resultado;
 }
 
-void print_Complexo(Complexo c) { printf("%.2lf+%.2lfi\n", c.real, c.imag); }
+void print_Complexo(Complexo c) {
+  if (c.imag >= 0) {
+    printf("%.2lf+%.2lfi\n", c.real, c.imag);
+  } else {
+    printf("%.2lf%.2lfi\n", c.real, c.imag);
+  }
+}
 
 int main() {
   Complexo c1, c2;
-  scanf("%lf+%lfi %lf+%lfi\n", &c1.real, &c1.imag, &c2.real, &c2.imag);
-  print_Complexo(soma(c1, c2));
+  if (scanf("%lf %lfi %lf %lfi", &c1.real, &c1.imag, &c2.real, &c2.imag) == 4) {
+    print_Complexo(soma(c1, c2));
+  }
   return 0;
 }
