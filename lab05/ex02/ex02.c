@@ -1,1 +1,23 @@
 /* iaed26 - ist1118070 - lab05/ex02 */
+#include <stdio.h>
+
+typedef struct complexo {
+  double real;
+  double imag;
+} Complexo;
+
+Complexo soma(Complexo c1, Complexo c2) {
+  Complexo resultado;
+  resultado.real = c1.real + c2.real;
+  resultado.imag = c1.imag + c2.imag;
+  return resultado;
+}
+
+void print_Complexo(Complexo c) { printf("%.2lf+%.2lfi\n", c.real, c.imag); }
+
+int main() {
+  Complexo c1, c2;
+  scanf("%lf+%lfi %lf+%lfi\n", &c1.real, &c1.imag, &c2.real, &c2.imag);
+  print_Complexo(soma(c1, c2));
+  return 0;
+}
