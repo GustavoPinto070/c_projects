@@ -67,9 +67,9 @@ int main() {
   int ganha_o = ganha(dim, tab, 'o');
 
   // return print message
-  if (ganha_x) {
+  if (ganha_x && !ganha_o) {
     printf("x\n");
-  } else if (ganha_o) {
+  } else if (ganha_o && !ganha_x) {
     printf("o\n");
   } else {
     printf("?\n");
