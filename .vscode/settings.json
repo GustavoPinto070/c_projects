@@ -1,14 +1,21 @@
 {
-    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
-    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
-    "editor.formatOnSave": true,
-    "files.associations": {
-        "*.h": "c"
-    },
-    "files.exclude": {
-        "**/*.out": true,
-        "**/*.o": true,
-        "**/.git": true
-    },
-    "C_Cpp.clang_format_fallbackStyle": "LLVM"
+	"C_Cpp.default.compilerPath": "/usr/bin/gcc",
+	"C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [
+		80
+	],
+	"files.associations": {
+		"*.h": "c"
+	},
+	"files.exclude": {
+		"**/*.out": true,
+		"**/*.o": true,
+		"**/.git": true
+	},
+	"C_Cpp.clang_format_fallbackStyle": "LLVM"
 }
